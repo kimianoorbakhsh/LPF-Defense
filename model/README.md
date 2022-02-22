@@ -1,6 +1,6 @@
 # Models
 ## Data
-The ModelNet40 data we used in our paper is uploaded in folder `Data/`. Any data used for training or testing should be in the same folder.
+The ModelNet40 data we used in our paper is uploaded in folder `Data/`. 
 ## Pointnet and Pointnet++
 To train the Pointnet model, use the following code:
 ```python
