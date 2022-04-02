@@ -13,7 +13,7 @@ This code depends on the following packages:
  5. `matplotlib`
 
 # Code Structure
-Details will be added soon.
+The instructions on running each part of the code is explained in each folder separately. 
 
 ## Citation
 If you use parts of the code in this repository for your own research, please consider citing:
