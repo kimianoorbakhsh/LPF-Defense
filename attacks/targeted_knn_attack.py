@@ -134,26 +134,7 @@ if __name__ == "__main__":
         print('Model not recognized')
         exit(-1)
 
-    # # load model weight
-    # state_dict = torch.load(
-    #     BEST_WEIGHTS[args.model], map_location='cpu')
-    # print('Loading weight {}'.format(BEST_WEIGHTS[args.model]))
-    # try:
-    #     model.load_state_dict(state_dict)
-    # except RuntimeError:
-    #     # eliminate 'module.' in keys
-    #     state_dict = {k[7:]: v for k, v in state_dict.items()}
-    #     model.load_state_dict(state_dict)
-     # *************************************
-    # num_class = args.num_class
-    # model_name = 'pointnet_cls'
-    # cls = importlib.import_module(model_name)
-
-    # model = cls.get_model(num_class, normal_channel=False)
-
-    # checkpoint = torch.load('pretrain/pointnet_best_model.pth')
-    # model.load_state_dict(checkpoint['model_state_dict'])
-    # *************************************
+    
     # distributed mode on multiple GPUs!
     # much faster than nn.DataParallel
     model = DistributedDataParallel(
