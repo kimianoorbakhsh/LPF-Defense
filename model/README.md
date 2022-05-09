@@ -1,6 +1,6 @@
 # Models
 ## Data
-The ModelNet40 data we used in our paper is uploaded in folder `Data/`. The scanobjectnn Dataset and the subset of ShapeNet Dataset used in the paper are available at this [link](https://drive.google.com/drive/folders/19tYbe11jHkKxpWASWEQl_YdJJr-WsXSg?usp=sharing). 
+The ModelNet40 data we used in our paper is uploaded in folder `Data/`. The scanobjectnn Dataset and the subset of ShapeNet Dataset used in the paper are available at [https://hkust-vgd.github.io/scanobjectnn/](https://hkust-vgd.github.io/scanobjectnn/) and [https://github.com/thuml/Metasets](https://github.com/thuml/Metasets).
 ## Pointnet and Pointnet++
 To train the Pointnet model, use the following code:
 ```python

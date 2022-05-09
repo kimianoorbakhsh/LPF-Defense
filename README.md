@@ -16,7 +16,7 @@ This code depends on the following packages:
 The instructions on running each part of the code is explained in the README file of each folder separately. 
 
 # Data
-The ModelNet40 data we used in our paper is uploaded in folder `model/Data/`. The scanobjectnn Dataset and the subset of ShapeNet Dataset used in the paper are available at this [link](https://drive.google.com/drive/folders/19tYbe11jHkKxpWASWEQl_YdJJr-WsXSg?usp=sharing). 
+The ModelNet40 data we used in our paper is uploaded in folder `model/Data/`. The scanobjectnn Dataset and the subset of ShapeNet Dataset used in the paper are available at [https://hkust-vgd.github.io/scanobjectnn/](https://hkust-vgd.github.io/scanobjectnn/) and [https://github.com/thuml/Metasets](https://github.com/thuml/Metasets).
 
 ## Citation
 If you use parts of the code in this repository for your own research, please consider citing:
