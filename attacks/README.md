@@ -1,7 +1,6 @@
 # Attacks
 
-This section consists of 6 attacks: Add-CD, Add-HD, Knn, Drop(100, 200), and Perturb. The code in this part is based on [IF-Defense]
-(https://github.com/Wuziyi616/IF-Defense) repository.
+This section consists of 6 attacks: Add-CD, Add-HD, Knn, Drop(100, 200), and Perturb. The code in this part is based on [IF-Defense](https://github.com/Wuziyi616/IF-Defense) repository.
 ## Add
 To run attack of add, please run the following command (note that you should specify the path of the pretrained model inside the file named `targeted_add_attack.py`)): 
 ```python
