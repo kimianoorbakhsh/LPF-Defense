@@ -1,1 +1,9 @@
-Instructions for executing the attacks will be added soon.
+# Attacks
+
+This section consists of 6 attacks: Add-CD, Add-HD, Knn, Drop(100, 200), and Perturb.
+
+## Add
+To run attack of add, please run the following command (note that you should specify the path of the pretrained model inside the file named `targeted_add_attack.py`)): 
+```python
+!NCCL_DEBUG=INFO CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=29501 targeted_add_attack.py --model={MODEL NAME (pointnet/pointnet2/dgcnn)} --dist_func={DISTANCE FUNCTION (chamfer/hausdorff)} --num_points=1024 --dataset=mn40 --batch_size={BATCH SIZE} --binary_step=10 --num_class={NUMBER OF CLASS CATEGORIES} --data_root={PATH TO DATA TO BE ATTACKED}
+```
