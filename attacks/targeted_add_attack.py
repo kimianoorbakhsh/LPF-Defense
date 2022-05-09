@@ -99,8 +99,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     BATCH_SIZE = BATCH_SIZE[args.num_points]
     BEST_WEIGHTS = BEST_WEIGHTS[args.dataset][args.num_points]
-    # if args.batch_size == -1:
-    #     args.batch_size = BATCH_SIZE[args.model]
+    
     set_seed(1)
     print(args)
 
