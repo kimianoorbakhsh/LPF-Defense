@@ -24,7 +24,7 @@ def parse_args():
     parser.add_argument('--use_cpu', action='store_true', default=False, help='use cpu mode')
     parser.add_argument('--gpu', type=str, default='0', help='specify gpu device')
     parser.add_argument('--batch_size', type=int, default=256, help='batch size in training')
-    parser.add_argument('--num_category', default=40, type=int, choices=[10, 40],  help='training on ModelNet10/40')
+    parser.add_argument('--num_category', default=40, type=int, choices=[8, 9, 10, 15, 40],  help='training on ModelNet10/40')
     parser.add_argument('--num_point', type=int, default=1024, help='Point Number')
     parser.add_argument('--log_dir', type=str, required=True, help='Experiment root')
     parser.add_argument('--use_normals', action='store_true', default=False, help='use normals')
@@ -33,6 +33,9 @@ def parse_args():
     parser.add_argument('--test_data_path', type=str, default='Data/test/modelnet10_test_data.npy', help='test data path')
     parser.add_argument('--test_label_path', type=str, default='Data/test/modelnet10_test_labels.npy', help='test data path')
     parser.add_argument('--main_path', type=str, default='/content/drive/MyDrive/Kimia', help='main path')
+    parser.add_argument('--normal', dest='normal', action='store_true')
+    parser.add_argument('--no-normal', dest='normal', action='store_false')
+    parser.set_defaults(feature=False)
     return parser.parse_args()
 
 
@@ -94,7 +97,10 @@ def main(args):
     test_X, test_y = load_data(args.main_path, args.test_data_path, args.test_label_path, mode='test')
     test_X, test_y = test_X.astype(np.float32), test_y.astype(np.int64)
     
-    default_transform = transforms.Compose([toTensor()])
+    if args.normal:
+        default_transform = transforms.Compose([Normalize(), toTensor()])
+    else:
+        default_transform = transforms.Compose([toTensor()])
     
     test_dataset = ModelNetDataLoader(test_X, test_y, transform=default_transform)
     testDataLoader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False, num_workers=10)
