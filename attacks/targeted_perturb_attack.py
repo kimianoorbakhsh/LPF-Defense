@@ -88,6 +88,8 @@ if __name__ == "__main__":
                         help='Number of iterations in each search step')
     parser.add_argument('--local_rank', default=-1, type=int,
                         help='node rank for distributed training')
+    parser.add_argument('--num_class', default=-40, type=int,
+                        help='number of classes in the dataset.')
     args = parser.parse_args()
     BATCH_SIZE = BATCH_SIZE[args.num_points]
     BEST_WEIGHTS = BEST_WEIGHTS[args.dataset][args.num_points]
@@ -99,7 +101,7 @@ if __name__ == "__main__":
     dist.init_process_group(backend='nccl')
     torch.cuda.set_device(args.local_rank)
     cudnn.benchmark = True
-    num_class = 40
+    num_class = args.num_class
     # build model
     if args.model.lower() == 'dgcnn':
         k = 20
@@ -114,7 +116,8 @@ if __name__ == "__main__":
 
         model = cls.get_model(num_class, normal_channel=False)
 
-        checkpoint = torch.load('pretrain/pointnet_best_model.pth')
+        # checkpoint = torch.load('pretrain/pointnet_best_model.pth')
+        checkpoint = torch.load('pretrain/pointnet_best_model_shape.pth')
         model.load_state_dict(checkpoint['model_state_dict'])
     elif args.model.lower() == 'pointnet2':
         model_name = 'pointnet2_cls_ssg'
