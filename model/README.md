@@ -17,4 +17,4 @@ python test_classification.py --model pointnet/pointnet2_cls_ssg --num_category 
 # DGCNN
 To train the DGCNN model, modify the code in `dgcnn.py` to use the DGCNN model. Modify the path of these variables: `train_data`, `train_labels`, `test_data`, `test_labels`.
 
-To teest the DGCNN model, uncomment the code in `dgcnn.py` and modify the path of these variables: `test_data`, `test_labels`.
+To test the DGCNN model, uncomment the code in `dgcnn.py` and modify the path of these variables: `test_data`, `test_labels`.
