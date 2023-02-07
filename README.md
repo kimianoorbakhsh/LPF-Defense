@@ -22,10 +22,17 @@ The ModelNet40 data we used in our paper is uploaded in folder `model/Data/`. Th
 If you use parts of the code in this repository for your own research, please consider citing:
 
 ```
-@article{naderi2022lpfdefense,
-        title={LPF-Defense: 3D Adversarial Defense based on Frequency Analysis}, 
-        author={Hanieh Naderi and Kimia Noorbakhsh and Arian Etemadi and Shohreh Kasaei},
-        journal={arXiv preprint arXiv:2202.11287},
-        year={2022}
+@article{10.1371/journal.pone.0271388,
+    doi = {10.1371/journal.pone.0271388},
+    author = {Naderi, Hanieh AND Noorbakhsh, Kimia AND Etemadi, Arian AND Kasaei, Shohreh},
+    journal = {PLOS ONE},
+    publisher = {Public Library of Science},
+    title = {LPF-Defense: 3D adversarial defense based on frequency analysis},
+    year = {2023},
+    month = {02},
+    volume = {18},
+    url = {https://doi.org/10.1371/journal.pone.0271388},
+    pages = {1-19},
+    number = {2},
 }
 ```
