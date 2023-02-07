@@ -1,7 +1,7 @@
 # LPF-Defense
 
 The Code and Data for the paper ["LPF-Defense: 3D Adversarial Defense
-based on Frequency Analysis"](https://arxiv.org/abs/2202.11287), by Hanieh Naderi, Kimia Noorbakhsh*, Arian Etemadi*, and Shohreh Kasaei.
+based on Frequency Analysis"](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0271388), by Hanieh Naderi, Kimia Noorbakhsh*, Arian Etemadi*, and Shohreh Kasaei.
 
 # Prerequisites
 This code depends on the following packages:
